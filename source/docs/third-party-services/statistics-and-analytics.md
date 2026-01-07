@@ -112,59 +112,6 @@ plausible:
 
 ### Counting Tools
 
-#### LeanCloud (China)
-
-Adding article reading times counting to NexT theme. Documentation how to set the counter up and running safely aviable in [hexo-leancloud-counter-security](https://github.com/theme-next/hexo-leancloud-counter-security).
-
-{% tabs leanCloud-counter %}
-<!-- tab Get App Keys → -->
-1. Create an account or log in to [LeanCloud](https://console.leancloud.app/login), and then click the button to create an application in [dashboard](https://console.leancloud.app/apps).
-    ![LeanCloud](/images/valine-1.png)
-2. Go to the application you just created, select `Settings → App Keys` in the lower left corner, and you will see your APP ID and APP Key.
-    ![LeanCloud](/images/valine-2.png)
-<!-- endtab -->
-
-<!-- tab Installation → -->
-Install `hexo-leancloud-counter-security` by executing the following command in {% label info@site root dir %}:
-
-```bash
-npm install hexo-leancloud-counter-security
-```
-<!-- endtab -->
-
-<!-- tab Hexo Config → -->
-Edit {% label info@Hexo config file %} and add following content:
-
-```yml Hexo config file
-leancloud_counter_security:
-  enable_sync: true
-  app_id: <your app id>
-  app_key: <your app key>
-  username: <your username> # Will be asked while deploying if is left blank
-  password: <your password> # Recommmended to be left blank. Will be asked while deploying if is left blank
-```
-<!-- endtab -->
-
-<!-- tab NexT Config -->
-Edit {% label primary@NexT config file %} and fill options under `leancloud_visitors` section.
-
-```yml NexT config file
-# Show number of visitors to each article.
-# You can visit https://www.leancloud.cn get AppID and AppKey.
-leancloud_visitors:
-  enable: true
-  app_id: #<app_id>
-  app_key: #<app_key>
-  # Required for apps from CN region
-  server_url: # <your server url>
-  # Dependencies: https://github.com/theme-next/hexo-leancloud-counter-security
-  # If you don't care about security in lc counter and just want to use it directly
-  # (without hexo-leancloud-counter-security plugin), set the `security` to `false`.
-  security: true
-```
-<!-- endtab -->
-{% endtabs %}
-
 #### Firebase
 
 Firebase Analytics provides the functionality of visitor statistics.
