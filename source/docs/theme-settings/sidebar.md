@@ -112,16 +112,11 @@ Then you need to specify your own avatar. It can be done one of the ways below:
 
 {% subtabs avatar1 %}
 <!-- tab {% label success@Hexo directory %} -->
-Put your avatar under {% label info@site directory %} `source/uploads/` (create directory if it doesn't exists).
-And then change option to `url: /uploads/avatar.png`.
-<!-- endtab -->
-
-<!-- tab NexT directory -->
-Put your avatar under {% label primary@theme directory %} `source/images/`.
+Put your avatar under {% label info@site directory %} `source/images/` (create directory if it doesn't exists).
 And then change option to `url: /images/avatar.png`.
 
 {% note info %}
-Current site uses avatar under {% label primary@theme directory %} from file located in `next/source/images/apple-touch-icon-next.png` with following config:
+By default, NexT uses avatar under {% label primary@theme directory %} from file located in `next/source/images/apple-touch-icon-next.png` with following config:
 
 ```yml NexT config file
 avatar:
