@@ -94,23 +94,6 @@ Render Disqus comment component using Disqus API.
       shortname: # See: https://disqus.com/admin/settings/general/
     ```
 
-### Changyan (China)
-
-Changyan is the industry's leading social commenting system, supporting both PC and mobile access methods, providing a new way of commenting on websites. Changyan has a variety of common account login, triple filtering mechanism, real-time data statistics, fast data export, comprehensive support for mobile and other leading functions. It fully satisfies the needs of major websites for user login, comment, sharing, and review.
-
-1. Create an account or log into [Changyan](https://changyan.kuaizhan.com/), then add your site to get APP ID and APP KEY.
-2. Set the value `enable` to `true`, and add the obtained APP ID (`appid`) and APP KEY (`appkey`) to the `changyan` section in the {% label primary@NexT config file %} as following:
-
-    ```yml NexT config file
-    # changyan
-    changyan:
-      enable: false
-      appid:
-      appkey:
-      count: true
-    ```
-Note: after you comment, it will take some time for you to see the increase in the number of comments.
-
 ### LiveRe
 
 LiveRe is a content platform based on social networking site reviews to help users communicate freely.
