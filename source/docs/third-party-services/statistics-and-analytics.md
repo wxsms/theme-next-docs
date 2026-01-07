@@ -46,17 +46,6 @@ baidu_analytics: your_id
 <!-- endtab -->
 {% endtabs %}
 
-#### Growingio Analytics
-
-Official documentation: https://docs.growingio.com/v3/developer-manual/sdkintegrated/web-js-sdk/latest-jssdk
-
-Edit {% label primary@NexT config file %} and change the value of `growingio_analytics` to your project ID.
-
-```yml NexT config file
-# Growingio Analytics
-growingio_analytics: # <project_id>
-```
-
 #### Cloudflare Web Analytics
 
 Official documentation: https://www.cloudflare.com/web-analytics/
