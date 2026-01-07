@@ -105,6 +105,7 @@ Edit {% label primary@NexT config file %} and set the needed values under the `m
 motion:
   enable: true
   async: false
+  duration: 200
   transition:
     # All available Transition variants: https://theme-next.js.org/animate/
     menu_item: fadeInDown
