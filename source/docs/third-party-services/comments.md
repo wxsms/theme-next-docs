@@ -133,6 +133,10 @@ Gitalk is a modern comment component based on Github Issue and Preact.
       # If you want everyone visiting your site to see a uniform language, you can set a force language value
       # Available values: en | es-ES | fr | ru | zh-CN | zh-TW
       language:
+      # If you want to customize the content of the initialized Issue, please edit the body parameter.
+      # For example:
+      # body: Comments for post ${title}, see ${url}
+      body:
     ```
 
 {% note warning %}
