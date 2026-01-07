@@ -53,20 +53,25 @@ scheme: Gemini
 
 {% darkmode_preview %}
 
-You can enable Dark Mode by setting `darkmode` to `true` in {% label primary@NexT config file %}.
-
-```yml NexT config file
-darkmode: true
-```
-
-The `prefers-color-scheme` CSS media feature is used to bring Dark Mode to all 4 schemes above, make sure your browser supports it.
+Theme NexT automatically shows Dark Mode if the OS preferred theme is dark. The `prefers-color-scheme` CSS media feature is used to bring Dark Mode to all 4 schemes above. It's supported by most modern OS and browsers.
 
 {% caniuse prefers-color-scheme @ current,past_1,past_2,past_3,past_4,past_5 %}
 
-Theme NexT automatically shows Dark Mode if the OS preferred theme is dark. It's supported by macOS Mojave, iOS 13 and Android 10 or later. Relevant docs:
-[How to use Dark Mode on your Mac](https://support.apple.com/en-us/HT208976)
-[Use Dark Mode on your iPhone, iPad, or iPod touch](https://support.apple.com/en-us/HT210332)
-[Dark theme | Android Developers](https://developer.android.com/guide/topics/ui/look-and-feel/darktheme)
+You can disable Dark Mode by setting `darkmode` to `false` in {% label primary@NexT config file %}.
+
+```yml NexT config file
+darkmode: false
+```
+
+Besides, NexT uses `lightdark` setting to provide more options for Dark Mode.
+
+```yml NexT config file
+# Light-Dark Mode
+lightdark:
+  enable: false
+  # Add @supports (color: light-dark(red, red)) check
+  check_supports: true
+```
 
 #### Configuring Favicon
 
