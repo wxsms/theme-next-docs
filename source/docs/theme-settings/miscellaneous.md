@@ -98,8 +98,6 @@ If Dark Mode is enabled, dark code highlighting themes will be available.
 <!-- tab <code>copy_button</code> -->
 NexT supports the copy-and-paste functionality of codeblock.
 
-{% subtabs codeblock1 %}
-<!-- tab <code>enable</code> -->
 You can enable it by setting value `copy_button.enable` to `true` in {% label primary@NexT config file %}. By default NexT shows copy result of the copy-and-paste functionality.
 
 ```yml NexT config file
@@ -107,8 +105,7 @@ codeblock:
   copy_button:
     enable: true
 ```
-<!-- endtab -->
-<!-- tab <code>style</code> -->
+
 With `style` option, you can change your copy button style.
 There are three style available currently: `default` (Just leave it empty), `flat` and `mac`.
 
@@ -117,8 +114,43 @@ codeblock:
   copy_button:
     style: flat
 ```
+
 <!-- endtab -->
-{% endsubtabs %}
+
+<!-- tab <code>fold</code> -->
+NexT supports the fold functionality of codeblock.
+
+You can enable it by setting value `fold.enable` to `true` in {% label primary@NexT config file %}.
+
+```yml NexT config file
+codeblock:
+  # Fold code block
+  fold:
+    enable: true
+    height: 500
+```
+
+With `height` option, you can change the height (in px) of the code block.
+
+```yml NexT config file
+codeblock:
+  fold:
+    enable: true
+    height: 300
+```
+
+<!-- endtab -->
+
+<!-- tab <code>language</code> -->
+NexT supports the language functionality of codeblock.
+
+You can enable it by setting value `language` to `true` in {% label primary@NexT config file %}.
+
+```yml NexT config file
+codeblock:
+  # Display language name
+  language: true
+```
 
 <!-- endtab -->
 

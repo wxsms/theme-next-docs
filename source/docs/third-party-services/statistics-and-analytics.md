@@ -19,6 +19,8 @@ NexT will not send record to analytics service provider as long as the page's ho
     google_analytics:
       tracking_id: UA-XXXXXXXX-X
       only_pageview: false
+      # only needed if you are using `only_pageview` mode, https://developers.google.com/analytics/devguides/collection/protocol/ga4
+      measure_protocol_api_secret:
     ```
 
 3. When field `only_pageview` is set to true, NexT will only send `pageview` event to Google Analytics.
