@@ -31,7 +31,6 @@ Detailed documentation about these plugins is listed below.
 * [Overview](/docs/third-party-services/comments.html#Overview)
 * [Disqus](/docs/third-party-services/comments.html#Disqus)
 * [DisqusJS](/docs/third-party-services/comments.html#DisqusJS)
-* [Changyan (China)](/docs/third-party-services/comments.html#Changyan)
 * [LiveRe](/docs/third-party-services/comments.html#LiveRe)
 * [Gitalk](/docs/third-party-services/comments.html#Gitalk)
 * [Utterances](/docs/third-party-services/comments.html#Utterances)
@@ -43,7 +42,6 @@ Detailed documentation about these plugins is listed below.
 
 * [Google Analytics](/docs/third-party-services/statistics-and-analytics.html#Google-Analytics)
 * [Baidu Analytics (China)](/docs/third-party-services/statistics-and-analytics.html#Baidu-Analytics-China)
-* [Growingio Analytics](/docs/third-party-services/statistics-and-analytics.html#Growingio-Analytics)
 * [Cloudflare Web Analytics](/docs/third-party-services/statistics-and-analytics.html#Cloudflare-Web-Analytics)
 * [Microsoft Clarity Analytics](/docs/third-party-services/statistics-and-analytics.html#Microsoft-Clarity-Analytics)
 * [Matomo Analytics](/docs/third-party-services/statistics-and-analytics.html#Matomo-Analytics)
@@ -52,7 +50,6 @@ Detailed documentation about these plugins is listed below.
 
 #### Statistics
 
-* [LeanCloud (China)](/docs/third-party-services/statistics-and-analytics.html#LeanCloud-China)
 * [Firebase](/docs/third-party-services/statistics-and-analytics.html#Firebase)
 * [Busuanzi Counting](/docs/third-party-services/statistics-and-analytics.html#Busuanzi-Counting-China)
 
@@ -69,14 +66,12 @@ Detailed documentation about these plugins is listed below.
 
 * [Chatra](/docs/third-party-services/chat-services.html#Chatra)
 * [Tidio](/docs/third-party-services/chat-services.html#Tidio)
-* [Gitter](/docs/third-party-services/chat-services.html#Gitter)
 
 ### External Libraries
 
 * [PJAX](/docs/third-party-services/external-libraries.html#PJAX)
 * [Fancybox](/docs/third-party-services/external-libraries.html#Fancybox)
 * [MediumZoom](/docs/third-party-services/external-libraries.html#Medium-Zoom)
-* [Lazyload](/docs/third-party-services/external-libraries.html#Lazyload)
 * [Pangu Autospace](/docs/third-party-services/external-libraries.html#Pangu-Autospace)
 * [Quicklink](/docs/third-party-services/external-libraries.html#Quicklink)
 * [Motion](/docs/third-party-services/external-libraries.html#Animation-Effect)

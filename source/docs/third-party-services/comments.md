@@ -15,7 +15,7 @@ comments:
   # Available values: tabs | buttons
   style: tabs
   # Choose a comment system to be displayed by default
-  # Available values: disqus | disqusjs | changyan | livere | gitalk | utterances | isso
+  # Available values: disqus | disqusjs | livere | gitalk | utterances | isso
   active:
   # Setting `true` means remembering the comment system selected by the visitor
   storage: true

@@ -46,23 +46,6 @@ mediumzoom: true
 Do not enable both `fancybox` and `mediumzoom`.
 {% endnote %}
 
-### Lazyload
-
-[Lozad.js](https://github.com/ApoorvSaxena/lozad.js) is a lazy loader plugin in modern vanilla JavaScript. It delays loading of images in long web pages. Images outside of viewport will not be loaded before user scrolls to them. This is opposite of image preloading.
-
-You can enable it by setting value `lazyload` to `true` in {% label primary@NexT config file %}.
-
-```yml NexT config file
-# Vanilla JavaScript plugin for lazyloading images.
-lazyload: true
-```
-
-Then run the following command in {% label info@site root dir %} to ensure that `lazyload` can be enabled or disabled correctly:
-
-```bash
-hexo clean
-```
-
 ### Pangu Autospace
 
 [pangu.js](https://github.com/vinta/pangu.js) will automatically insert a blank space between all the Chinese characters and the hexagonal English numeric symbols on the page.
