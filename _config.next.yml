@@ -251,12 +251,28 @@ motion:
 # ============================================================= #
 
 comments:
+  active: giscus
   lazyload: true
 
 disqus:
+  enable: false
+  shortname:
+  count: false
+
+giscus:
   enable: true
-  shortname: next-theme
-  count: true
+  repo: next-theme/theme-next-docs
+  repo_id: MDEwOlJlcG9zaXRvcnkyNTM0NDA0OTU=
+  category: Announcements
+  category_id: DIC_kwDODxsx784DCfOq
+  mapping: pathname
+  strict: 1
+  reactions_enabled: 1
+  emit_metadata: 0
+  theme: preferred_color_scheme
+  lang: en
+  input_position: bottom
+  loading: lazy
 
 
 # ============================================================= #
