@@ -116,57 +116,58 @@ plausible:
 
 #### Firebase
 
-Firebase Analytics provides the functionality of visitor statistics.
+Cloud Firestore provides the functionality of visitor statistics without loading the Firebase JavaScript SDK.
 
 {% tabs firestore %}
-<!-- tab Get apiKey & projectId → -->
-Login to [Firebase](https://console.firebase.google.com/u/0/) to get apiKey and projectId. The Web API Key gets generated once you go into the "Authentication" section for the first time.
-
-![Firebase](/images/firebase-1.png)
-![Firebase](/images/firebase.png)
-
-[More detailed documentation](https://firebase.google.com/docs/firestore/)
-<!-- endtab -->
-
 <!-- tab Create Firestore Database → -->
 1. Create a Firestore database in Firebase console.
 
 ![Firestore](/images/firestore-1.png)
 ![Firestore](/images/firestore-2.png)
 
-2. Apply these rules in Firestore Database Rules:
+1. Apply these rules in Firestore Database Rules:
 
 ```js
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-    match /articles/{document=**} {
-      allow read, create: if true;
-      allow write: if request.resource.data.count==resource.data.count+1;
-    }
-    match /{document=**} {
-      allow read, write: if false;
+    match /articles/{document} {
+      allow read: if true;
+      allow create: if request.resource.data.keys().hasOnly(['count'])
+                    && request.resource.data.count is int
+                    && request.resource.data.count == 1;
+      allow update: if request.resource.data.diff(resource.data).affectedKeys().hasOnly(['count'])
+                    && request.resource.data.count is int
+                    && request.resource.data.count == resource.data.count + 1;
+      allow delete: if false;
     }
   }
 }
 ```
 
-This configuration allows anyone to read the visitor count but prevents unauthorized writes to the database.
+Replace `articles` if you use a different collection name. These rules allow anonymous reads and count increments while preventing changes to other fields and document deletion. They cannot prevent artificial increments or quota abuse; use a trusted backend if stronger protection is required.
 
 ![Firestore](/images/firestore-3.png)
-<!-- endtab --> 
+<!-- endtab -->
 
 <!-- tab NexT Config -->
-Edit {% label primary@NexT config file %} and add or change `firestore` section:
+Find your Project ID in Firebase console under `Project settings → General`, then edit {% label primary@NexT config file %} and add or change the `firestore` section:
+
+![Firebase Project ID](/images/firebase.png)
+
+Only the Project ID is required. The Web API Key shown on the same page is not used by NexT.
 
 ```yml NexT config file
 firestore:
   enable: true
   collection: articles #required, a string collection name to access firestore database
-  apiKey: #required
   projectId: #required
 ```
-Note: Firestore visitor counting tracks unique visitors (UV) only. The count won't increase on page refresh as it uses browser's localStorage. To test the counter:
+
+An API key is not required. NexT uses the [Cloud Firestore REST API](https://firebase.google.com/docs/firestore/use-rest-api), and anonymous requests are authorized by your Firestore Security Rules.
+
+Note: Firestore visitor counting records at most one visit per article and browser profile because it uses the browser's localStorage. It is not a reliable unique-visitor metric. To test the counter:
+
 - Clear localStorage in Developer Tools
 - Use incognito/private mode
 - Use different browsers
