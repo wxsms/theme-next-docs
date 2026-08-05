@@ -7,11 +7,22 @@ date: 2026-07-01 11:02:19
 
 ## What's Changed
 ### ⭐ Features
-* Omit integrity hashes for local vendor plugins by @pivaldi in https://github.com/next-theme/hexo-theme-next/pull/964
+* Add Knocket live chat service (alongside Chatra/Tidio) by @rrivory in https://github.com/next-theme/hexo-theme-next/pull/970
+```diff
++# Knocket is a 100% free live chat widget by Tencent RTC.
++# For more information: https://trtc.io/solutions/knocket
++knocket:
++  enable: false
++  async: true
++  identifier: # Get it from https://trtc.io/solutions/knocket
+```
+* fix: omit integrity hashes for local vendor plugins by @pivaldi in https://github.com/next-theme/hexo-theme-next/pull/964
 * Add deprecation warning (80c1fb5)
 * Add leancloud_visitors warning (c92181b)
 ### 🐞 Bug Fixes
 * Add fallback if NexT.boot.motion is failed by @wherewhere in https://github.com/next-theme/hexo-theme-next/pull/953
+### 🛠 Improvements
+* fix: Replace deprecated `url.parse()` with WHATWG `URL` API by @pilgrimlyieu in https://github.com/next-theme/hexo-theme-next/pull/955
 ### 🌀 External Changes
 * Update dependency eslint to v10 by @renovate[bot] in https://github.com/next-theme/hexo-theme-next/pull/946
 * Update dependency c8 to v11 by @renovate[bot] in https://github.com/next-theme/hexo-theme-next/pull/950
